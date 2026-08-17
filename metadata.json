@@ -1,0 +1,6 @@
+{
+  "name": "Thám Tử Toán Học - Giải Tam Giác Vuông",
+  "description": "Game tương tác giáo dục Toán 9 Bài 3: Giải Tam Giác Vuông - Mở khóa 6 mảnh ghép bí ẩn, điều tra và tìm ra nhà toán học Pythagoras.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
