@@ -50,3 +50,25 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #d97706;
 }
+
+/* KaTeX Math & Radical Overline Styling */
+.katex {
+  font-size: 1.15em;
+  color: inherit;
+}
+
+.katex .sqrt {
+  font-weight: bold;
+}
+
+.katex .frac-line {
+  border-bottom-width: 2px !important;
+  border-bottom-color: currentColor !important;
+}
+
+.inline-math {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
