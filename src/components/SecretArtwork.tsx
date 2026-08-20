@@ -390,7 +390,7 @@ export const SecretArtwork: React.FC<SecretArtworkProps> = ({
               {isUnlocked ? (
                 <div className="w-full h-full relative group/unlocked hover:ring-2 hover:ring-emerald-400/60 transition-all">
                   {/* Subtle golden corner badge */}
-                  <div className="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-slate-900/80 border border-amber-400/50 backdrop-blur-xs flex items-center gap-1 text-[11px] font-bold text-amber-300 shadow-md">
+                  <div className="absolute top-2 left-2 px-2.5 py-1 rounded-lg bg-slate-900/90 border border-amber-400/60 backdrop-blur-xs flex items-center gap-1.5 text-xs sm:text-sm font-black text-amber-300 shadow-md">
                     <span className="text-emerald-400">✓</span> {piece.label}
                   </div>
                   {/* Glass shimmer overlay */}
@@ -400,33 +400,33 @@ export const SecretArtwork: React.FC<SecretArtworkProps> = ({
                 /* Locked Ancient Cover Tile */
                 <div
                   id={`locked-tile-${piece.id}`}
-                  className="w-full h-full relative bg-gradient-to-br from-slate-900 via-slate-950 to-indigo-950 border-2 border-amber-600/40 rounded-xl p-4 flex flex-col items-center justify-center text-center shadow-inner cursor-pointer hover:border-amber-400 hover:from-slate-850 hover:to-indigo-900 transition-all duration-300 group/tile"
+                  className="w-full h-full relative bg-gradient-to-br from-slate-900 via-slate-925 to-indigo-950 border-2 border-amber-600/50 rounded-xl p-4 flex flex-col items-center justify-center text-center shadow-inner cursor-pointer hover:border-amber-400 hover:from-slate-850 hover:to-indigo-900 transition-all duration-300 group/tile"
                 >
                   {/* Ancient stone texture pattern */}
-                  <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#eab308_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
+                  <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#eab308_1.5px,transparent_1.5px)] [background-size:18px_18px] pointer-events-none" />
 
                   {/* Corner ornaments */}
-                  <div className="absolute top-1.5 left-1.5 text-amber-500/50 text-[10px] font-serif">⌜</div>
-                  <div className="absolute top-1.5 right-1.5 text-amber-500/50 text-[10px] font-serif">⌝</div>
-                  <div className="absolute bottom-1.5 left-1.5 text-amber-500/50 text-[10px] font-serif">⌞</div>
-                  <div className="absolute bottom-1.5 right-1.5 text-amber-500/50 text-[10px] font-serif">⌟</div>
+                  <div className="absolute top-2 left-2 text-amber-500/60 text-xs font-serif">⌜</div>
+                  <div className="absolute top-2 right-2 text-amber-500/60 text-xs font-serif">⌝</div>
+                  <div className="absolute bottom-2 left-2 text-amber-500/60 text-xs font-serif">⌞</div>
+                  <div className="absolute bottom-2 right-2 text-amber-500/60 text-xs font-serif">⌟</div>
 
                   {/* Lock badge */}
-                  <div className="relative z-10 w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-b from-amber-500/20 to-amber-700/10 border-2 border-amber-500/50 flex items-center justify-center mb-2 shadow-lg group-hover/tile:scale-110 group-hover/tile:border-amber-400 transition-transform duration-300">
-                    <span className="text-xl md:text-2xl drop-shadow-md">🔒</span>
+                  <div className="relative z-10 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-b from-amber-500/25 to-amber-700/15 border-2 border-amber-500/60 flex items-center justify-center mb-2 shadow-xl group-hover/tile:scale-110 group-hover/tile:border-amber-400 transition-transform duration-300">
+                    <span className="text-xl sm:text-2xl md:text-3xl drop-shadow-md">🔒</span>
                   </div>
 
-                  <div className="relative z-10 font-serif font-black tracking-widest text-amber-300 text-sm md:text-base drop-shadow-sm">
+                  <div className="relative z-10 font-serif font-black tracking-widest text-amber-300 text-sm sm:text-base md:text-lg lg:text-xl drop-shadow-md">
                     {piece.label}
                   </div>
 
-                  <div className="relative z-10 text-[11px] text-slate-400 font-medium tracking-wide mt-0.5 group-hover/tile:text-amber-200 transition-colors">
+                  <div className="relative z-10 text-xs sm:text-sm text-slate-300 font-semibold tracking-wide mt-1 group-hover/tile:text-amber-200 transition-colors">
                     BÍ MẬT ĐANG KHÓA
                   </div>
 
                   {/* Detective Hint badge */}
-                  <div className="relative z-10 mt-2 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-[10px] text-amber-400/90 font-mono flex items-center gap-1">
-                    <span>📐</span> Giải toán để mở
+                  <div className="relative z-10 mt-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-xs sm:text-sm text-amber-300 font-mono font-bold flex items-center gap-1.5 shadow-sm">
+                    <span>📐</span> Bấm giải bài toán
                   </div>
                 </div>
               )}
