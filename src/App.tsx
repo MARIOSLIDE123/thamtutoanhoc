@@ -40,11 +40,19 @@ export default function App() {
     }
   });
 
-  // 3. Questions Bank State with LocalStorage
+  // 3. Questions Bank State with LocalStorage & Version Migration
+  const QUESTIONS_VERSION = 'v4_latex_math';
   const [questions, setQuestions] = useState<Question[]>(() => {
     try {
+      const storedVersion = localStorage.getItem('math_detective_version');
       const saved = localStorage.getItem('math_detective_questions');
-      if (saved) return JSON.parse(saved);
+      if (storedVersion === QUESTIONS_VERSION && saved) {
+        return JSON.parse(saved);
+      }
+    } catch {}
+    try {
+      localStorage.setItem('math_detective_version', QUESTIONS_VERSION);
+      localStorage.setItem('math_detective_questions', JSON.stringify(DEFAULT_QUESTIONS));
     } catch {}
     return DEFAULT_QUESTIONS;
   });
