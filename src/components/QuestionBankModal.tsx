@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Question } from '../types';
 import { DEFAULT_QUESTIONS } from '../data/defaultQuestions';
 import { BookOpen, X, Plus, Edit2, RotateCcw, Check, Trash2, HelpCircle } from 'lucide-react';
+import { MathRenderer } from './MathRenderer';
 
 interface QuestionBankModalProps {
   isOpen: boolean;
@@ -186,7 +187,9 @@ export const QuestionBankModal: React.FC<QuestionBankModalProps> = ({
                     </div>
                   </div>
                 ) : (
-                  <p className="text-xs text-slate-300 line-clamp-2">{q.question}</p>
+                  <div className="text-xs text-slate-300 line-clamp-2">
+                    <MathRenderer text={q.question} />
+                  </div>
                 )}
               </div>
             );
