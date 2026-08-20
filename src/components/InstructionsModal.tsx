@@ -1,6 +1,7 @@
 import React from 'react';
 import { BookOpen, X, CheckCircle, HelpCircle, Shield, Award } from 'lucide-react';
 import { DetectiveMascot } from './DetectiveMascot';
+import { MathRenderer } from './MathRenderer';
 
 interface InstructionsModalProps {
   isOpen: boolean;
@@ -90,18 +91,18 @@ export const InstructionsModal: React.FC<InstructionsModalProps> = ({ isOpen, on
           </div>
 
           {/* Math Formulas Reference Box */}
-          <div className="p-4 rounded-2xl bg-slate-950 border border-amber-500/40 space-y-2">
-            <div className="text-xs font-bold text-amber-300 uppercase tracking-wider flex items-center gap-1.5">
-              <span>📐</span> BÍ KÍP HÌNH HỌC TOÁN 9 – BÀI 3:
+          <div className="p-4 md:p-5 rounded-2xl bg-slate-950 border-2 border-amber-500/40 space-y-3">
+            <div className="text-xs md:text-sm font-bold text-amber-300 uppercase tracking-wider flex items-center gap-1.5">
+              <span>📐</span> BÍ KÍP HỆ THỨC LƯỢNG TOÁN 9 – BÀI 3:
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-amber-100">
-              <div className="p-2 rounded-lg bg-slate-900 border border-slate-800 space-y-1">
-                <div>• b = a · sin(B) = a · cos(C)</div>
-                <div>• c = a · sin(C) = a · cos(B)</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm md:text-base font-mono text-amber-100">
+              <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+                <div><MathRenderer text="• $b = a \\cdot \\sin(B) = a \\cdot \\cos(C)$" /></div>
+                <div><MathRenderer text="• $c = a \\cdot \\sin(C) = a \\cdot \\cos(B)$" /></div>
               </div>
-              <div className="p-2 rounded-lg bg-slate-900 border border-slate-800 space-y-1">
-                <div>• b = c · tan(B) = c · cot(C)</div>
-                <div>• c = b · tan(C) = b · cot(B)</div>
+              <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+                <div><MathRenderer text="• $b = c \\cdot \\tan(B) = c \\cdot \\cot(C)$" /></div>
+                <div><MathRenderer text="• $c = b \\cdot \\tan(C) = b \\cdot \\cot(B)$" /></div>
               </div>
             </div>
           </div>
